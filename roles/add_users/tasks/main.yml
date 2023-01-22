@@ -1,0 +1,16 @@
+# add testuser on remote machine    
+- name: add_user
+  ansible.builtin.user:
+    # name of the user to be added ( default: testuser )
+    name: testuser
+      # generate password using >>>>  openssl passwd -6 ( default: VXbs82!YM )
+    password: $6$bJUrR2U5PLCG9B4A$A2vJGdw6sV8yoQ5PlAi7EHdijYyajEf0nzhBU7geL9UsLLyziu7nIOdEumd0znycT1xvlMVVE2XEWCR0aq9Qu0
+    state: "present" 
+    shell: "/bin/bash"
+    system: false
+    createhome: true
+    home: "/home/testuser"
+      # this will add testuser with sudo permission
+    groups:
+      - sudo
+    append: yes

@@ -1,0 +1,7 @@
+---
+- hosts: all
+  become: yes
+  # commented with # will not perform any task on the remotehost example: (#- add_user) won't add any user to the remotehost
+  roles:
+    - add_user
+    - generate_ssh_login
