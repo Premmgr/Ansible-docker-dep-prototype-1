@@ -4,4 +4,5 @@
   # commented with # will not perform any task on the remotehost example: (#- add_user) won't add any user to the remotehost
   roles:
     - add_user
+    #- user_backup
     - generate_ssh_login
