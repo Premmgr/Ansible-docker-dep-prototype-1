@@ -1,8 +1,14 @@
 ---
 - hosts: all
+# uncomment become: root if you are playing init-server.yml play as root
+#  become: root 
   become: yes
   # commented with # will not perform any task on the remotehost example: (#- add_user) won't add any user to the remotehost
   roles:
+    - commen
+    - docker
     - add_user
-    #- user_backup
+    - user_backup
     - generate_ssh_login
+    - vsftpd
+    - backups
