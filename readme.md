@@ -1,4 +1,5 @@
 Prerequisites
+* external application repository url [download link]
 * ansible installed on the system
 * remote server with ssh access [ user ssh-add-key root@serverip ]
 * enable password authentification on in [ /etc/ssh/sshd_config ]
